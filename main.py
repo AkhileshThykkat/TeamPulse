@@ -1,6 +1,9 @@
-def main():
-    print("Hello from teampulse!")
+from fastapi import FastAPI
+
+app = FastAPI()
 
 
 if __name__ == "__main__":
-    main()
+    import uvicorn
+
+    uvicorn.run("main:app", port=8000, reload=False)
